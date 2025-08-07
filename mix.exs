@@ -1,7 +1,7 @@
 defmodule PhoenixLiveInspector.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -54,30 +54,13 @@ defmodule PhoenixLiveInspector.MixProject do
 
   defp docs do
     [
-      main: "readme",
+      main: "PhoenixLiveInspector",
       name: "Phoenix LiveView Inspector",
       source_ref: "v#{@version}",
       source_url: "https://github.com/fawidev/phoenix_live_inspector",
       homepage_url: "https://hex.pm/packages/phoenix_live_inspector",
       extras: [
-        "README.md",
-        "CONTRIBUTING.md",
-        "LICENSE"
-      ],
-      groups_for_extras: [
-        "Guides": ["README.md", "CONTRIBUTING.md"]
-      ],
-      groups_for_modules: [
-        "Core": [PhoenixLiveInspector],
-        "Telemetry": [PhoenixLiveInspector.TelemetryHandler],
-        "Server": [
-          PhoenixLiveInspector.Server,
-          PhoenixLiveInspector.Server.WebSocketHandler
-        ],
-        "Storage": [
-          PhoenixLiveInspector.SessionStore,
-          PhoenixLiveInspector.SessionTracker
-        ]
+        "README.md"
       ]
     ]
   end
