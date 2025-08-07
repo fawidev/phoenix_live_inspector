@@ -1,6 +1,0 @@
-<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" fill="#6B46C1" rx="16"/>
-  <text x="64" y="45" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle">🛠️</text>
-  <text x="64" y="90" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">LiveView</text>
-  <text x="64" y="110" font-family="Arial, sans-serif" font-size="12" fill="#E5E7EB" text-anchor="middle">DevTools</text>
-</svg>

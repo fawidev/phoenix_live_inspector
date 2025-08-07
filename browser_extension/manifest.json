@@ -1,8 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Phoenix LiveView Inspector",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Real-time debugging and state inspection for Phoenix LiveView applications",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png", 
+    "128": "icons/icon128.png"
+  },
   
   "permissions": [
     "activeTab",
