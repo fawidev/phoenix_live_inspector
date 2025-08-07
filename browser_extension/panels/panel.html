@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Phoenix LiveView Inspector Panel</title>
+    <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+    <div class="devtools-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">
+                <span class="icon">🔍</span>
+                Phoenix LiveView Inspector
+            </div>
+            <div class="connection-status">
+                <span id="connection-indicator" class="status-indicator disconnected"></span>
+                <span id="connection-text">Disconnected</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="section-header">Sessions</div>
+                <div id="sessions-list" class="sessions-list">
+                    <div class="no-sessions">No active sessions</div>
+                </div>
+                
+                <div class="section-header">Tools</div>
+                <div class="tools">
+                    <button id="refresh-btn" class="tool-button">↻ Refresh</button>
+                    <button id="clear-btn" class="tool-button">🗑️ Clear</button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="tabs">
+                    <button class="tab active" data-tab="inspector">State Inspector</button>
+                    <button class="tab" data-tab="events">Events</button>
+                    <button class="tab" data-tab="performance">Performance</button>
+                </div>
+
+                <!-- Inspector Tab -->
+                <div id="inspector-tab" class="tab-content active">
+                    <div class="inspector-container">
+                        <div class="state-content">
+                            <div class="select-session">
+                                Interact with your LiveView app to see state updates here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Tab -->
+                <div id="events-tab" class="tab-content">
+                    <div class="events-container">
+                        <div class="events-header">
+                            <span>Recent Events</span>
+                            <button id="clear-events" class="clear-button">Clear</button>
+                        </div>
+                        <div id="events-list" class="events-list">
+                            <div class="no-events">No events recorded</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Tab -->
+                <div id="performance-tab" class="tab-content">
+                    <div class="performance-container">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-label">Active Sessions</div>
+                                <div id="active-sessions-count" class="metric-value">0</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Total Events</div>
+                                <div id="total-events-count" class="metric-value">0</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Memory Usage</div>
+                                <div id="memory-usage" class="metric-value">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="panel.js"></script>
+</body>
+</html>

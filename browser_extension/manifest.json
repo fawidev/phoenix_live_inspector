@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Phoenix LiveView Inspector",
+  "version": "0.1.0",
+  "description": "Real-time debugging and state inspection for Phoenix LiveView applications",
+  
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "http://localhost/*",
+    "https://localhost/*"
+  ],
+  
+  "devtools_page": "devtools.html",
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "https://localhost/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
