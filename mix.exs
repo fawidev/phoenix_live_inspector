@@ -41,17 +41,44 @@ defmodule PhoenixLiveInspector.MixProject do
 
   defp package do
     [
-      maintainers: ["Fawad"],
+      maintainers: ["Fawad Ahsan"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/fawidev/phoenix_live_inspector"}
+      links: %{
+        "GitHub" => "https://github.com/fawidev/phoenix_live_inspector",
+        "Hex" => "https://hex.pm/packages/phoenix_live_inspector",
+        "Docs" => "https://hexdocs.pm/phoenix_live_inspector"
+      },
+      files: ~w(lib browser_extension mix.exs README.md LICENSE CONTRIBUTING.md)
     ]
   end
 
   defp docs do
     [
-      main: "PhoenixLiveInspector",
+      main: "readme",
+      name: "Phoenix LiveView Inspector",
       source_ref: "v#{@version}",
-      source_url: "https://github.com/fawidev/phoenix_live_inspector"
+      source_url: "https://github.com/fawidev/phoenix_live_inspector",
+      homepage_url: "https://hex.pm/packages/phoenix_live_inspector",
+      extras: [
+        "README.md",
+        "CONTRIBUTING.md",
+        "LICENSE"
+      ],
+      groups_for_extras: [
+        "Guides": ["README.md", "CONTRIBUTING.md"]
+      ],
+      groups_for_modules: [
+        "Core": [PhoenixLiveInspector],
+        "Telemetry": [PhoenixLiveInspector.TelemetryHandler],
+        "Server": [
+          PhoenixLiveInspector.Server,
+          PhoenixLiveInspector.Server.WebSocketHandler
+        ],
+        "Storage": [
+          PhoenixLiveInspector.SessionStore,
+          PhoenixLiveInspector.SessionTracker
+        ]
+      ]
     ]
   end
 end

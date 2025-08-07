@@ -1,5 +1,10 @@
 # Phoenix LiveView Inspector
 
+[![Hex.pm](https://img.shields.io/hexpm/v/phoenix_live_inspector.svg)](https://hex.pm/packages/phoenix_live_inspector)
+[![Documentation](https://img.shields.io/badge/hex-docs-blue.svg)](https://hexdocs.pm/phoenix_live_inspector)
+[![License](https://img.shields.io/hexpm/l/phoenix_live_inspector.svg)](https://github.com/fawidev/phoenix_live_inspector/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/hexpm/dt/phoenix_live_inspector.svg)](https://hex.pm/packages/phoenix_live_inspector)
+
 Real-time debugging and state inspection for Phoenix LiveView applications.
 
 ## Features
