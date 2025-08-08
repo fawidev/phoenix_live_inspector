@@ -49,9 +49,38 @@ end
 
 ## Browser Extension
 
-1. Install from [Chrome Web Store](https://chrome.google.com/webstore) (coming soon)
-2. Or load unpacked from `browser_extension/` folder
-3. Open Chrome DevTools → "LiveView Inspector" tab
+### Option 1: Chrome Web Store (Recommended)
+Install from [Chrome Web Store](https://chrome.google.com/webstore) (coming soon)
+
+### Option 2: Local Development Setup
+
+**Load the extension from this repository:**
+
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/fawidev/phoenix_live_inspector.git
+   cd phoenix_live_inspector
+   ```
+
+2. **Open Chrome Extensions page**:
+   - Go to `chrome://extensions/` in Chrome
+   - Enable **Developer mode** (toggle in top-right corner)
+
+3. **Load the extension**:
+   - Click **"Load unpacked"** button
+   - Navigate to and select the `browser_extension/` folder in this repo
+   - The Phoenix LiveView Inspector extension will appear in your extensions list
+
+4. **Verify installation**:
+   - Look for the Phoenix LiveView Inspector icon in your Chrome toolbar
+   - Open any webpage and press F12 to open DevTools
+   - You should see a **"LiveView Inspector"** tab in the DevTools panel
+
+5. **Start debugging**:
+   - Run your Phoenix LiveView app with the library installed
+   - Navigate to your app (e.g., `http://localhost:4000`)
+   - Open DevTools → "LiveView Inspector" tab
+   - Interact with your LiveView app to see real-time events and state changes
 
 ## Usage
 
